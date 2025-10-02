@@ -7,9 +7,9 @@ describe("GET /ex1/welcome", () => {
 	app.route("/ex1", exercise1);
 
 	it("returns a personalized welcome message using the provided name", async () => {
-		const res = await app.request("/ex1/welcome?name=Friend");
+		const res = await app.request("/ex1/welcome?name=Martha");
 		expect(res.status).toBe(200);
 		const json = await res.json();
-		expect(json).toEqual({ message: "Hello Friend" });
+		expect(json).toEqual({ message: "Hello Martha" });
 	});
 });
