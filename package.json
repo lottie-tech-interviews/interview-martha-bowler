@@ -1,0 +1,44 @@
+{
+	"name": "coding-ai-interview",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"setup": "pnpm rebuild better-sqlite3",
+		"dev": "tsx watch src/server.ts",
+		"build": "rimraf dist && tsc -p tsconfig.json",
+		"start": "node dist/server.js",
+		"typecheck": "tsc -p tsconfig.json --noEmit",
+		"test": "vitest",
+		"test:run": "vitest run",
+		"ex3:setup": "drizzle-kit push  --verbose --config=src/exercise3/ignore/drizzle.config.ts"
+	},
+	"dependencies": {
+		"@faker-js/faker": "^9.9.0",
+		"@hono/node-server": "^1.18.2",
+		"@hono/swagger-ui": "^0.5.2",
+		"@hono/zod-openapi": "^1.1.0",
+		"@hono/zod-validator": "^0.7.2",
+		"better-sqlite3": "^12.2.0",
+		"drizzle-orm": "^0.44.4",
+		"hono": "^4.9.1",
+		"hono-openapi": "^0.4.8",
+		"zod": "^4.0.17",
+		"zod-openapi": "^5.3.1"
+	},
+	"devDependencies": {
+		"@types/better-sqlite3": "^7.6.9",
+		"@types/node": "^24.2.1",
+		"drizzle-kit": "^0.31.4",
+		"rimraf": "^6.0.1",
+		"tsx": "^4.20.4",
+		"typescript": "^5.9.2",
+		"vitest": "^3.2.4"
+	},
+	"packageManager": "pnpm@10.14.0",
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"better-sqlite3"
+		]
+	}
+}

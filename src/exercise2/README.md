@@ -1,0 +1,2 @@
+- The `/lookup` endpoint is slow. Can you make it faster?
+- Commit and merge your changes like you would do in a real project.

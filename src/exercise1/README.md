@@ -1,0 +1,2 @@
+- Fix the `/welcome` endpoint so that it returns a welcome message with the name provided in the query parameter.
+- Commit and merge your changes like you would do in a real project.
