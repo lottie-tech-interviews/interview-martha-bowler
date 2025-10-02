@@ -42,11 +42,9 @@ const route = createRoute({
 });
 
 app.openapi(route, (c) => {
-	// Intentionally broken implementation: ignores the provided name
-	// and always returns a fixed message
-	c.req.valid("query");
+	const { name } = c.req.valid("query");
 	return c.json({
-		message: "Hello Friend",
+		message: `Hello ${name}`,
 	});
 });
 
